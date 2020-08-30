@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Linear Transformation</string>
+  </property>
+  <widget class="QWidget" name="main_grid">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="3" column="0">
+     <layout class="QHBoxLayout" name="inputs_HLayout">
+      <item>
+       <layout class="QGridLayout" name="inputs_gridlayout">
+        <property name="leftMargin">
+         <number>20</number>
+        </property>
+        <property name="rightMargin">
+         <number>20</number>
+        </property>
+        <property name="horizontalSpacing">
+         <number>40</number>
+        </property>
+        <item row="0" column="2">
+         <layout class="QVBoxLayout" name="secondUnitVector_VLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="bottomMargin">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="secondUnitVector_lbl">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Set X &amp; Y Components</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>0</number>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>Second basis Vector</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="secondUnitVector_value_lbl">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string/>
+              </property>
+              <property name="toolTipDuration">
+               <number>-1</number>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">margin-left: 5px;</string>
+              </property>
+              <property name="text">
+               <string>(0 î, 1 ĵ)</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="secondUnitVector_i_HLayout">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>X Component</string>
+              </property>
+              <property name="statusTip">
+               <string/>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">margin-right: 5px;</string>
+              </property>
+              <property name="text">
+               <string>x</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="secondVector_i_slider">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>500</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="toolTip">
+               <string>X Component</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>0</number>
+              </property>
+              <property name="statusTip">
+               <string/>
+              </property>
+              <property name="minimum">
+               <number>-200</number>
+              </property>
+              <property name="maximum">
+               <number>200</number>
+              </property>
+              <property name="pageStep">
+               <number>1</number>
+              </property>
+              <property name="tracking">
+               <bool>true</bool>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="invertedAppearance">
+               <bool>false</bool>
+              </property>
+              <property name="invertedControls">
+               <bool>false</bool>
+              </property>
+              <property name="tickPosition">
+               <enum>QSlider::TicksBelow</enum>
+              </property>
+              <property name="tickInterval">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="secondUnitVector_j_HLayout">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Y Component</string>
+              </property>
+              <property name="statusTip">
+               <string/>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">margin-right: 5px;</string>
+              </property>
+              <property name="text">
+               <string>y</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="secondVector_j_slider">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>500</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="toolTip">
+               <string>Y Component</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>0</number>
+              </property>
+              <property name="statusTip">
+               <string/>
+              </property>
+              <property name="minimum">
+               <number>-200</number>
+              </property>
+              <property name="maximum">
+               <number>200</number>
+              </property>
+              <property name="pageStep">
+               <number>1</number>
+              </property>
+              <property name="value">
+               <number>100</number>
+              </property>
+              <property name="tracking">
+               <bool>true</bool>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="invertedAppearance">
+               <bool>false</bool>
+              </property>
+              <property name="invertedControls">
+               <bool>false</bool>
+              </property>
+              <property name="tickPosition">
+               <enum>QSlider::TicksBelow</enum>
+              </property>
+              <property name="tickInterval">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1">
+         <layout class="QVBoxLayout" name="firstUnitVector_VLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="bottomMargin">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="firstUnitVector_lbl">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="toolTip">
+               <string>Set X &amp; Y Components</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>0</number>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>First basis Vector</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="firstUnitVector_value_lbl">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string/>
+              </property>
+              <property name="toolTipDuration">
+               <number>-1</number>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">margin-left: 5px;</string>
+              </property>
+              <property name="text">
+               <string>(1 î, 0 ĵ)</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="firstUnitVector_i_HLayout">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>X Component</string>
+              </property>
+              <property name="statusTip">
+               <string/>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">margin-right: 5px;</string>
+              </property>
+              <property name="text">
+               <string>x</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="firstVector_i_slider">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>500</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="toolTip">
+               <string>X Component</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>0</number>
+              </property>
+              <property name="statusTip">
+               <string/>
+              </property>
+              <property name="minimum">
+               <number>-200</number>
+              </property>
+              <property name="maximum">
+               <number>200</number>
+              </property>
+              <property name="pageStep">
+               <number>1</number>
+              </property>
+              <property name="value">
+               <number>100</number>
+              </property>
+              <property name="tracking">
+               <bool>true</bool>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="invertedAppearance">
+               <bool>false</bool>
+              </property>
+              <property name="invertedControls">
+               <bool>false</bool>
+              </property>
+              <property name="tickPosition">
+               <enum>QSlider::TicksBelow</enum>
+              </property>
+              <property name="tickInterval">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="firstUnitVector_j_HLayout">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Y Component</string>
+              </property>
+              <property name="statusTip">
+               <string/>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">margin-right: 5px;</string>
+              </property>
+              <property name="text">
+               <string>y</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="firstVector_j_slider">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>500</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="toolTip">
+               <string>Y Component</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>0</number>
+              </property>
+              <property name="statusTip">
+               <string/>
+              </property>
+              <property name="minimum">
+               <number>-200</number>
+              </property>
+              <property name="maximum">
+               <number>200</number>
+              </property>
+              <property name="pageStep">
+               <number>1</number>
+              </property>
+              <property name="tracking">
+               <bool>true</bool>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="invertedAppearance">
+               <bool>false</bool>
+              </property>
+              <property name="invertedControls">
+               <bool>false</bool>
+              </property>
+              <property name="tickPosition">
+               <enum>QSlider::TicksBelow</enum>
+              </property>
+              <property name="tickInterval">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="image_lbl">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This label contains Image.&lt;/p&gt;&lt;p&gt;Image will be added on runtime.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
